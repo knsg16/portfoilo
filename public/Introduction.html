@@ -12,6 +12,8 @@
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script type="text/javascript" src="js/sample.js"></script>
   </head>
   <body>
     <div id="main">
@@ -26,21 +28,33 @@
             <img src="asset/folder-regular.svg" class="ts">
             Portfolio
           </div>
-          <div class="text-white pl-5 folder py-1">
+          <div class="text-white pl-5 folder py-1" id="introductionTs">
             <img src="asset/typescript.svg" class="ts">
             Introduction.ts
+          </div>
+          <div class="text-white pl-5 folder py-1" id="introductionTsx">
+            <img src="asset/react.png" class="ts">
+            Introduction.tsx
           </div>
         </div>
         <div class="col-10 pl-0" id="right">
           <div id="tabs" class="pl-0">
-            <div class="text-white tab">
+            <div class="text-white tab" id="introductionTsTab">
               <div>
                 <img src="asset/typescript.svg" class="ts">
                 Introduction.ts
                 <span class="pl-3">
                   <img src="asset/window-close-solid.svg" class="ts">
                 </span>
-
+              </div>
+            </div>
+            <div class="text-white tab" id="introductionTsxTab">
+              <div>
+                <img src="asset/react.png" class="ts">
+                Introduction.tsx
+                <span class="pl-3">
+                  <img src="asset/window-close-solid.svg" class="ts">
+                </span>
               </div>
             </div>
           </div>
@@ -95,8 +109,8 @@
               <p class="m-0 pl-2">46</p>
             </div>
             <div id="text">
-              <pre>
-                <code class="typescript" id="code">import Human, { IHuman } from 'human'
+              <pre id="introductionTsCode">
+                <code class="typescript" style="display: none;" id="fadeInCode">import Human, { IHuman } from 'human'
 import { travel, soccer, surfing, camping } from 'outdoor-hobbies'
 import { programing, leatherCraft, readingBook } from 'indoor-hobbies'
 
@@ -122,12 +136,12 @@ const others: object = {
 export const KanasugiYuuki: IHuman = () => {
   let me: IHuman = new Human(Sex.male, '1993-01-06', others);
   me.personality = 'Optimistic';
-  await live();
+  await live(me.age);
   return me;
 };
 
-const live = async () => {
-  while(KanasugiYuuki.age <= 100){
+const live = async (age: number) => {
+  while(age <= 100){
     try {
       await trySomethingNew;
       await StudyHard;
@@ -140,6 +154,55 @@ const live = async () => {
     }
   }
 };
+                </code>
+              </pre>
+              <pre id="introductionTsxCode" style="display: none;">
+                <code class="typescript" >import React from "react";
+import { travel, soccer, surfing, camping } from 'outdoor-hobbies'
+import { programing, leatherCraft, readingBook } from 'indoor-hobbies'
+
+const YuukiKanasugi = ({props: IProps}) => {
+  const {age} = props;
+  const _onLive = async () => {
+    while(age <= 100){
+      try {
+        await trySomethingNew;
+        await StudyHard;
+        await PlayHard;
+        return true;
+      }catch(e) {
+        e === 'critical' ? console.warn('Think about it for next challenge')
+          : console.log('No problems');
+        return false;
+      }
+    }
+  };
+  const others: object = {
+    hobby: [
+      travel, soccer, surfing, camping, programing, leatherCraft, readingBook
+    ],
+    eductation: {
+      University: 'Nagoya University Education dept',
+      ExchangeStudent: 'Uppsala University  in Sweden'
+    },
+    experience: {
+      Worksapplications: 'Quality Engineer',
+      Okan: [
+        'Product Manager', 'TechLead', 'ServerSide Enginer', 'Mobile Engineer', 'Infra Engineer'
+      ],
+      FreeLance: [
+        'Carstay', 'Rails Teacher', 'Created Booking System for Futsal'
+      ]
+    }
+  };
+  return (
+    &lt;Human sex={Sex.male} birthday='1993-01-06' others={others} >
+      &lt;Do keep={_onLive()}/>
+    &lt;/Human>
+  );
+};
+
+export default YuukiKanasugi;
                 </code>
               </pre>
             </div>

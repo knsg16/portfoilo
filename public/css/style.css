@@ -38,6 +38,7 @@
 .folder {
   font-family: 'Open Sans', sans-serif;
   font-size: 16px;
+  margin-left: 10px;
 }
 
 #tabs {
@@ -50,13 +51,14 @@
 .tab {
   padding-left: 10px;
   padding-right: 10px;
-  background-color: #4B4F53;
+  background-color: #282A36;
   font-family: 'Open Sans', sans-serif;
   font-size: 12px;
   display: flex;
   /*justify-content: center;*/
   align-items: center;
   /*width: 200px;*/
+  border-right: solid 2px #313437;
 }
 
 #code1 {
@@ -246,4 +248,14 @@ pre {
 .contact-link {
   height: 170px;
   width: 170px;
+}
+
+#introductionTsTab {
+  border-bottom: solid 3px #8BE9FD;
+  background-color: #4B4F53;
+}
+
+#introductionTs {
+  border-left: solid 3px #8BE9FD;
+  background-color: #4B4F53;
 }

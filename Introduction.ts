@@ -23,12 +23,12 @@ const others: object = {
 export const KanasugiYuuki: IHuman = () => {
   let me: IHuman = new Human(Sex.male, '1993-01-06', others);
   me.personality = 'Optimistic';
-  await live();
+  await live(KanasugiYuuki.age);
   return me;
 };
 
-const live = async () => {
-  while(KanasugiYuuki.age <= 100){
+const live = async (age: number) => {
+  while(age <= 100){
     try {
       await trySomethingNew;
       await StudyHard;
