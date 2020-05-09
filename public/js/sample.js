@@ -1,8 +1,24 @@
 $(function(){
 
+  var isDisplay = true
   setInterval(function(){
-    $('#fadeInCode').fadeIn("slow");
-  },2000);
+    if(isDisplay){
+      $('#js-target').t({
+        speed: 1,
+        init:function(elm){
+          console.log('init');
+        },
+        typing:function(elm,left,total){
+          console.log('typing');
+        },
+        fin:function(elm){
+          console.log('fin');
+          isDisplay = false;
+        }
+      });
+    }
+  },10);
+
 
   $('#introductionTsx').on('click', function(e) {
     // $('p').css('color','blue');
