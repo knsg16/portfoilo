@@ -19,9 +19,210 @@
   /*width: 100% ;*/
 }
 
-#main {
-  /*background-color: #282a36;*/
-  height: 1200px;
+
+@media screen and (max-width:1023px) {
+  /*　画面サイズが1023px以下はここを読み込む　*/
+  #main {
+    /*background-color: #282a36;*/
+    display: none;
+  }
+  .category{
+    padding-top: 50px;
+    font-size: 56px;
+    width: 100%;
+    text-align: center;
+    /*background-color: greenyellow;*/
+    margin-bottom: 30px;
+  }
+  .contact {
+    /*background-color: red;*/
+    display: none;
+  }
+  .work-container {
+    flex-direction: column;
+  }
+  .profile-img-container {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+  }
+  .profile-title-container {
+    display: flex;
+    justify-content: center;
+    /*background-color: orange;*/
+  }
+  .profile-title-main {
+    margin-top: 30px;
+    font-size: 40px;
+    text-align: center;
+  }
+
+  .profile-title-sub {
+    font-size: 40px;
+    text-align: center;
+  }
+
+  .profile-detail-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+  }
+  .profile-detail {
+    padding: 10px;
+    font-size: 27px;
+  }
+  .profile {
+    height: 1300px;
+    margin-top: 50px;
+    /*background-color: red;*/
+  }
+  .work-img{
+    display: none;
+  }
+  .work-img2{
+    width: 100%;
+    padding: 0;
+  }
+  .work-desc {
+    height: 600px;
+    /*width: 60%;*/
+    /*background-color: brown;*/
+    flex-direction: column;
+  }
+  .work-img-wrap {
+    padding: 0;
+  }
+  .work-title-img {
+    height: 150px;
+    width: 150px;
+  }
+  .work-title-desc {
+    width: 100%;
+  }
+  .work-title-main {
+    font-size: 64px;
+  }
+  .work-title-sub {
+    font-size: 32px;
+  }
+  .work-detail {
+    padding: 10px;
+    font-size: 32px;
+  }
+  .work-detail-container {
+    margin-top: 20px;
+  }
+  .store-img-apple{
+    padding-top: 5px;
+  }
+  .work {
+    height: 2000px;
+  }
+  .work-title-main-double {
+    font-size: 54px;
+    line-height: 66px;
+  }
+}
+
+@media screen and (min-width:1024px) {
+  /*　画面サイズが1024pxからはここを読み込む　*/
+  #main {
+    /*background-color: #282a36;*/
+    height: 1200px;
+  }
+  .category{
+    padding-top: 50px;
+    font-size: 36px;
+    width: 100%;
+    /*background-color: greenyellow;*/
+    margin-bottom: 30px;
+  }
+  .contact {
+    height: 900px;
+    width: 100%;
+    /*background-color: red;*/
+  }
+
+  .profile-title-main {
+    font-size: 40px;
+  }
+
+  .profile-title-sub {
+    font-size: 24px;
+  }
+
+  .profile-detail-container {
+    display: flex;
+    margin-top: 20px;
+  }
+  .profile-detail {
+    padding: 10px;
+    font-size: 18px;
+  }
+  .profile {
+    width: 100%;
+    margin-top: 50px;
+    /*background-color: red;*/
+  }
+  .work-img{
+    height: 600px;
+    width: 420px;
+    object-fit: cover;
+  }
+  .work-img2{
+    display: none;
+  }
+  .work-desc {
+    height: 600px;
+    /*width: 60%;*/
+    /*background-color: brown;*/
+    flex-direction: column;
+  }
+  .work-title-img {
+    height: 100px;
+    width: 100px;
+  }
+  .work-title-main {
+    font-size: 40px;
+  }
+  .work-title-sub {
+    font-size: 24px;
+  }
+  .work-detail {
+    padding: 10px;
+  }
+  .work-detail-container {
+    margin-top: 20px;
+    height: 400px;
+  }
+  .work {
+    width: 100%;
+  }
+  .work-title-main-double {
+    font-size: 40px;
+    line-height: 50px;
+  }
+}
+
+.work-links {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+}
+
+.store-img-apple{
+  padding-top: 5px;
+  height: 75px;
+  width: 180px;
+}
+.store-img-google{
+  height: 80px;
+  width: 200px;
+}
+
+.link-wrap{
+  display: flex;
+  justify-content: center;
 }
 
 #right {
@@ -130,9 +331,9 @@ pre {
   font-size: 46px;
 }
 
-.work {
-  height: 900px;
+.profile {
   width: 100%;
+  margin-top: 50px;
   /*background-color: red;*/
 }
 
@@ -141,34 +342,20 @@ pre {
   height: 800px;
 }
 
-.category{
-  padding-top: 50px;
-  font-size: 36px;
-  width: 100%;
-  /*background-color: greenyellow;*/
-  margin-bottom: 30px;
-}
-
-.work-container {
-  display: flex;
-  flex-direction: row;
-}
-
-.work-img-container {
-  height: 600px;
-  width: 40%;
-  /*background-color: blueviolet;*/
-}
-
 .work-img{
   height: 600px;
   width: 420px;
   object-fit: cover;
 }
 
-.work-desc {
+.profile-img{
+  height: 420px;
+  width: 420px;
+  object-fit: cover;
+}
+
+.profile-desc {
   height: 600px;
-  width: 60%;
   /*background-color: brown;*/
   flex-direction: column;
 }
@@ -177,57 +364,16 @@ pre {
   display: flex;
   flex-direction: row;
   width: 100%;
-  height: 100px;
   /*background-color: orange;*/
-}
-
-.work-title-img {
-  height: 100px;
-  width: 100px;
-}
-
-.work-title-main {
-  font-size: 40px;
-}
-
-.work-title-sub {
-  font-size: 24px;
-}
-
-.work-detail-container {
-  margin-top: 20px;
-  height: 400px;
 }
 
 .work-detail {
   padding: 10px;
 }
 
-.work-links {
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-end;
-}
-
-.store-img-apple{
-  padding-top: 5px;
-  height: 75px;
-  width: 180px;
-}
-
-.store-img-google{
-  height: 80px;
-  width: 200px;
-}
-
 .work-links-empty {
   width: 100%;
   height: 60px;
-}
-
-.work-title-main-double {
-  font-size: 40px;
-  line-height: 50px;
 }
 
 .contact {

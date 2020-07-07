@@ -20,7 +20,7 @@
   <body>
     <div id="main">
       <div class="row">
-        <div class="col-2" id="left">
+        <div class="col-3" id="left">
           <div class="text-white pl-2 folder mt-2 py-1">
             <img src="asset/folders-solid.svg" class="ts">
             Project
@@ -39,7 +39,7 @@
             Introduction.tsx
           </div>
         </div>
-        <div class="col-10 pl-0" id="right">
+        <div class="col-9 pl-0" id="right">
           <div id="tabs" class="pl-0">
             <div class="text-white tab" id="introductionTsTab">
               <div>
@@ -217,17 +217,62 @@ export default YuukiKanasugi;
 <!--        <h1 id="mission-text">ソフトウェアの力で<br/>社会の問題解決</h1>-->
 <!--      </div>-->
 <!--    </div>-->
-    <div class="work">
+    <div class="profile">
       <div class="container">
+        <div class="category">
+          About
+        </div>
+        <div class="work-container row">
+          <div class="profile-img-container col-lg-5">
+            <img src="https://firebasestorage.googleapis.com/v0/b/dev-subro.appspot.com/o/portfolio%2Fprofile-pic.jpg?alt=media&token=071fa7c6-213b-4f28-900e-9b7a9ede3eed"
+                 class="profile-img"
+                 height="420"
+                 width="420"
+            >
+          </div>
+          <div class="profile-desc col-lg-7">
+            <div class="profile-title-container">
+              <div class="work-title-desc pl-3">
+                <div class="profile-title-main">かなすぎ ゆうき</div>
+                <div class="profile-title-sub">Yuuki Kanasugi</div>
+              </div>
+            </div>
+            <div class="profile-detail-container">
+              <div class="profile-detail">
+
+                週休3日のフリーランスエンジニア<br/>
+                ←株式会社OKAN(PdM, TechLead)<br/>
+                ←株式会社ワークスアプリケーションズ。<br/><br/>
+
+                名古屋大学教育学部卒。<br/>
+                ウプサラ大学(スウェーデン)でリカレント教育の研究。<br/><br/>
+
+                独学で、英語とプログラミングを取得。<br/>
+                フリーランスエンジニアとして活動しながら、DOKUGAKUの運営<br/>
+                TOEIC 900<br/>
+                Ruby on Rails, ReactNative, React.js, Nose.js<br/><br/>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="work">
+      <div class="container-lg">
         <div class="category">
           WORK1
         </div>
-        <div class="work-container">
-          <div class="work-img-container">
+        <div class="row">
+          <div class="col-lg-5 work-img-wrap">
             <img src="https://firebasestorage.googleapis.com/v0/b/dev-subro.appspot.com/o/portfolio%2Fwork-img-subro.png?alt=media&token=57a58704-b6fd-4c7c-b7f3-f52435108814"
-                 class="work-img">
+                 class="work-img"
+                 height="600"
+            >
+            <img src="https://firebasestorage.googleapis.com/v0/b/dev-subro.appspot.com/o/portfolio%2Fiphonexw.png?alt=media&token=80fb5a5d-2195-47f0-995b-953c0c40ba96"
+                 class="work-img2"
+            >
           </div>
-          <div class="work-desc">
+          <div class="work-desc col-lg-7">
             <div class="work-title-container">
               <img src="asset/logo-subro.png" class="work-title-img">
               <div class="work-title-desc pl-3">
@@ -250,10 +295,10 @@ export default YuukiKanasugi;
               </div>
             </div>
             <div class="work-links">
-              <a href="https://apps.apple.com/jp/app/subro/id1507953087" target="_blank">
+              <a href="https://apps.apple.com/jp/app/subro/id1507953087" target="_blank" class="link-wrap">
                 <img src="asset/app-store-badge.png" class="store-img-apple">
               </a>
-              <a href="https://play.google.com/store/apps/details?id=jp.subro" target="_blank">
+              <a href="https://play.google.com/store/apps/details?id=jp.subro" target="_blank" class="link-wrap">
                 <img src="asset/google-play-badge.png" class="store-img-google">
               </a>
             </div>
@@ -263,15 +308,21 @@ export default YuukiKanasugi;
       </div>
     </div>
     <div class="work">
-      <div class="container">
+      <div class="container-lg">
         <div class="category">
           WORK2
         </div>
-        <div class="work-container">
-          <div class="work-img-container">
-            <img src="https://firebasestorage.googleapis.com/v0/b/dev-subro.appspot.com/o/portfolio%2Fwork-img-okanpay.png?alt=media&token=f4638e0c-376f-4e85-bbbc-92f2fbe8fdd5" class="work-img">
+        <div class="row">
+          <div class="col-lg-5 work-img-wrap">
+            <img src="https://firebasestorage.googleapis.com/v0/b/dev-subro.appspot.com/o/portfolio%2Fwork-img-okanpay.png?alt=media&token=f4638e0c-376f-4e85-bbbc-92f2fbe8fdd5"
+                 class="work-img"
+                 height="600"
+            >
+            <img src="https://firebasestorage.googleapis.com/v0/b/dev-subro.appspot.com/o/portfolio%2Fiphonexw.png?alt=media&token=80fb5a5d-2195-47f0-995b-953c0c40ba96"
+                 class="work-img2"
+            >
           </div>
-          <div class="work-desc">
+          <div class="work-desc col-lg-7">
             <div class="work-title-container">
               <img src="asset/logo-okanpay.png" class="work-title-img">
               <div class="work-title-desc pl-3">
@@ -295,10 +346,10 @@ export default YuukiKanasugi;
               </div>
             </div>
             <div class="work-links">
-              <a href="https://apps.apple.com/jp/app/%E3%81%8A%E3%81%8B%E3%82%93pay/id930164902" target="_blank">
+              <a href="https://apps.apple.com/jp/app/%E3%81%8A%E3%81%8B%E3%82%93pay/id930164902" target="_blank" class="link-wrap">
                 <img src="asset/app-store-badge.png" class="store-img-apple">
               </a>
-              <a href="https://play.google.com/store/apps/details?id=jp.okan.account&hl=en_US" target="_blank">
+              <a href="https://play.google.com/store/apps/details?id=jp.okan.account&hl=en_US" target="_blank" class="link-wrap">
                 <img src="asset/google-play-badge.png" class="store-img-google">
               </a>
             </div>
@@ -308,19 +359,23 @@ export default YuukiKanasugi;
       </div>
     </div>
     <div class="work">
-      <div class="container">
+      <div class="container-lg">
         <div class="category">
           WORK3
         </div>
-        <div class="work-container">
-          <div class="work-img-container">
-            <img src="https://firebasestorage.googleapis.com/v0/b/dev-subro.appspot.com/o/portfolio%2Fwork-img-carstay.png?alt=media&token=02ed9588-1a54-4442-bf7b-432e2f593876" class="work-img">
+        <div class="row">
+          <div class="col-lg-5 work-img-wrap">
+            <img src="https://firebasestorage.googleapis.com/v0/b/dev-subro.appspot.com/o/portfolio%2Fwork-img-carstay.png?alt=media&token=02ed9588-1a54-4442-bf7b-432e2f593876"
+                 class="work-img"
+                 height="600"
+            >
+            <img src="https://firebasestorage.googleapis.com/v0/b/dev-subro.appspot.com/o/portfolio%2Fiphonexw.png?alt=media&token=80fb5a5d-2195-47f0-995b-953c0c40ba96"
+                 class="work-img2"
+            >
           </div>
-          <div class="work-desc">
+          <div class="work-desc col-lg-7">
             <div class="work-title-container">
-              <a href="https://carstay.jp/ja" target="_blank">
-                <img src="asset/logo-carstay.png" class="work-title-img">
-              </a>
+              <img src="asset/logo-carstay.png" class="work-title-img">
               <div class="work-title-desc pl-3">
                 <div class="work-title-main">Carstay</div>
                 <div class="work-title-sub">車中泊、バンシェアサービス</div>
@@ -339,7 +394,6 @@ export default YuukiKanasugi;
 
                 ■使ってる技術<br/>
                 React.js, Typescript, React SSR,  Node.js, mongoDB,  AWS
-
               </div>
             </div>
             <div class="work-links-empty"></div>
@@ -349,22 +403,25 @@ export default YuukiKanasugi;
       </div>
     </div>
     <div class="work">
-      <div class="container">
+      <div class="container-lg">
         <div class="category">
           WORK4
         </div>
-        <div class="work-container">
-          <div class="work-img-container">
+        <div class="row">
+          <div class="col-lg-5 work-img-wrap">
             <img src="https://firebasestorage.googleapis.com/v0/b/dev-subro.appspot.com/o/portfolio%2Fwork-img-covid19.png?alt=media&token=48c1f67d-bb45-45ee-9ac7-b97c83e2a70d"
-                  class="work-img">
+                 class="work-img"
+                 height="600"
+            >
+            <img src="https://firebasestorage.googleapis.com/v0/b/dev-subro.appspot.com/o/portfolio%2Fiphonexw.png?alt=media&token=80fb5a5d-2195-47f0-995b-953c0c40ba96"
+                 class="work-img2"
+            >
           </div>
-          <div class="work-desc">
+          <div class="work-desc col-lg-7">
             <div class="work-title-container">
-              <a href="https://stopcovid19.metro.tokyo.lg.jp/" target="_blank">
-                <img src="asset/logo-covid19.png" class="work-title-img">
-              </a>
+              <img src="asset/logo-covid19.png" class="work-title-img">
               <div class="work-title-desc pl-3">
-                <div class="work-title-main-double">東京都 新型コロナウイルス<br/>感染症対策サイト</div>
+                <div class="work-title-main-double">東京都 新型コロナウイルス感染症対策サイト</div>
               </div>
             </div>
             <div class="work-detail-container border">
@@ -378,7 +435,7 @@ export default YuukiKanasugi;
                 ■役割<br/>
                 OSSのコミッターとして参画。自分のMissionである「ソフトウェアの<br/>
                 力で社会問題解決」がこんなにもできるチャンスはないと思い参画を決意。<br/><br/>
-                FrontEndを担当。
+                FrontEndを担当。<br/><br/>
 
                 ■使ってる技術<br/>
                 Nuxt.js
