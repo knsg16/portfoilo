@@ -1,65 +1,478 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Welcome to Firebase Hosting</title>
+    <meta charset="UTF-8">
+    <title>Yuuki Kanasugi</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/dracula.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script type="text/javascript" src="js/sample.js"></script>
+    <script src="js/t.min.js"></script>
 
-    <!-- update the version number as needed -->
-    <script defer src="/__/firebase/7.14.2/firebase-app.js"></script>
-    <!-- include only the Firebase features as you need -->
-    <script defer src="/__/firebase/7.14.2/firebase-auth.js"></script>
-    <script defer src="/__/firebase/7.14.2/firebase-database.js"></script>
-    <script defer src="/__/firebase/7.14.2/firebase-messaging.js"></script>
-    <script defer src="/__/firebase/7.14.2/firebase-storage.js"></script>
-    <!-- initialize the SDK after all desired features are loaded -->
-    <script defer src="/__/firebase/init.js"></script>
-
-    <style media="screen">
-      body { background: #ECEFF1; color: rgba(0,0,0,0.87); font-family: Roboto, Helvetica, Arial, sans-serif; margin: 0; padding: 0; }
-      #message { background: white; max-width: 360px; margin: 100px auto 16px; padding: 32px 24px; border-radius: 3px; }
-      #message h2 { color: #ffa100; font-weight: bold; font-size: 16px; margin: 0 0 8px; }
-      #message h1 { font-size: 22px; font-weight: 300; color: rgba(0,0,0,0.6); margin: 0 0 16px;}
-      #message p { line-height: 140%; margin: 16px 0 24px; font-size: 14px; }
-      #message a { display: block; text-align: center; background: #039be5; text-transform: uppercase; text-decoration: none; color: white; padding: 16px; border-radius: 4px; }
-      #message, #message a { box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24); }
-      #load { color: rgba(0,0,0,0.4); text-align: center; font-size: 13px; }
-      @media (max-width: 600px) {
-        body, #message { margin-top: 0; background: white; box-shadow: none; }
-        body { border-top: 16px solid #ffa100; }
-      }
-    </style>
   </head>
   <body>
-    <div id="message">
-      <h2>Welcome</h2>
-      <h1>Firebase Hosting Setup Complete</h1>
-      <p>You're seeing this because you've successfully setup Firebase Hosting. Now it's time to go build something extraordinary!</p>
-      <a target="_blank" href="https://firebase.google.com/docs/hosting/">Open Hosting Documentation</a>
+    <div id="main">
+      <div class="row">
+        <div class="col-3" id="left">
+          <div class="text-white pl-2 folder mt-2 py-1">
+            <img src="asset/folders-solid.svg" class="ts">
+            Project
+          </div>
+          <div class="text-white pl-3 folder py-1">
+            <img src="asset/chevron-down-regular.svg" class="ts" >
+            <img src="asset/folder-regular.svg" class="ts">
+            Portfolio
+          </div>
+          <div class="text-white pl-5 folder py-1" id="introductionTs">
+            <img src="asset/typescript.svg" class="ts">
+            Introduction.ts
+          </div>
+          <div class="text-white pl-5 folder py-1" id="introductionTsx">
+            <img src="asset/react.png" class="ts">
+            Introduction.tsx
+          </div>
+        </div>
+        <div class="col-9 pl-0" id="right">
+          <div id="tabs" class="pl-0">
+            <div class="text-white tab" id="introductionTsTab">
+              <div>
+                <img src="asset/typescript.svg" class="ts">
+                Introduction.ts
+                <span class="pl-3">
+                  <img src="asset/window-close-solid.svg" class="ts">
+                </span>
+              </div>
+            </div>
+            <div class="text-white tab" id="introductionTsxTab">
+              <div>
+                <img src="asset/react.png" class="ts">
+                Introduction.tsx
+                <span class="pl-3">
+                  <img src="asset/window-close-solid.svg" class="ts">
+                </span>
+              </div>
+            </div>
+          </div>
+          <div id="code1">
+            <div id="lines">
+              <p class="m-0 pl-2">1</p>
+              <p class="m-0 pl-2">2</p>
+              <p class="m-0 pl-2">3</p>
+              <p class="m-0 pl-2">4</p>
+              <p class="m-0 pl-2">5</p>
+              <p class="m-0 pl-2">6</p>
+              <p class="m-0 pl-2">7</p>
+              <p class="m-0 pl-2">8</p>
+              <p class="m-0 pl-2">9</p>
+              <p class="m-0 pl-2">10</p>
+              <p class="m-0 pl-2">11</p>
+              <p class="m-0 pl-2">12</p>
+              <p class="m-0 pl-2">13</p>
+              <p class="m-0 pl-2">14</p>
+              <p class="m-0 pl-2">15</p>
+              <p class="m-0 pl-2">16</p>
+              <p class="m-0 pl-2">17</p>
+              <p class="m-0 pl-2">18</p>
+              <p class="m-0 pl-2">19</p>
+              <p class="m-0 pl-2">20</p>
+              <p class="m-0 pl-2">21</p>
+              <p class="m-0 pl-2">22</p>
+              <p class="m-0 pl-2">23</p>
+              <p class="m-0 pl-2">24</p>
+              <p class="m-0 pl-2">25</p>
+              <p class="m-0 pl-2">26</p>
+              <p class="m-0 pl-2">27</p>
+              <p class="m-0 pl-2">28</p>
+              <p class="m-0 pl-2">29</p>
+              <p class="m-0 pl-2">29</p>
+              <p class="m-0 pl-2">30</p>
+              <p class="m-0 pl-2">31</p>
+              <p class="m-0 pl-2">32</p>
+              <p class="m-0 pl-2">33</p>
+              <p class="m-0 pl-2">34</p>
+              <p class="m-0 pl-2">35</p>
+              <p class="m-0 pl-2">36</p>
+              <p class="m-0 pl-2">37</p>
+              <p class="m-0 pl-2">38</p>
+              <p class="m-0 pl-2">39</p>
+              <p class="m-0 pl-2">40</p>
+              <p class="m-0 pl-2">41</p>
+              <p class="m-0 pl-2">42</p>
+              <p class="m-0 pl-2">43</p>
+              <p class="m-0 pl-2">44</p>
+              <p class="m-0 pl-2">45</p>
+              <p class="m-0 pl-2">46</p>
+            </div>
+            <div id="text">
+              <pre id="introductionTsCode">
+                <code class="typescript" id="js-target" style="display: none">import Human, { IHuman } from 'human'
+import { travel, soccer, surfing, camping } from 'outdoor-hobbies'
+import { programing, leatherCraft, readingBook } from 'indoor-hobbies'
+
+const others: object = {
+  hobby: [
+    travel, soccer, surfing, camping, programing, leatherCraft, readingBook
+  ],
+  eductation: {
+    University: 'Nagoya University Education dept',
+    ExchangeStudent: 'Uppsala University  in Sweden'
+  },
+  experience: {
+    Worksapplications: 'Quality Engineer',
+    Okan: [
+      'Product Manager', 'TechLead', 'ServerSide Enginer', 'Mobile Engineer', 'Infra Engineer'
+    ],
+    FreeLance: [
+      'Carstay', 'Rails Teacher', 'Created Booking System for Futsal'
+    ]
+  }
+};
+
+export const KanasugiYuuki: IHuman = () => {
+  let me: IHuman = new Human(Sex.male, '1993-01-06', others);
+  me.personality = 'Optimistic';
+  await live(me.age);
+  return me;
+};
+
+const live = async (age: number) => {
+  while(age <= 100){
+    try {
+      await trySomethingNew;
+      await StudyHard;
+      await PlayHard;
+      return true;
+    }catch(e) {
+      e === 'critical' ? console.warn('Think about it for next challenge')
+        : console.log('No problems');
+      return false;
+    }
+  }
+};
+                </code>
+              </pre>
+              <pre id="introductionTsxCode" style="display: none;">
+                <code class="typescript" >import React from "react";
+import { travel, soccer, surfing, camping } from 'outdoor-hobbies'
+import { programing, leatherCraft, readingBook } from 'indoor-hobbies'
+
+const YuukiKanasugi = ({props: IProps}) => {
+  const {age} = props;
+  const _onLive = async () => {
+    while(age <= 100){
+      try {
+        await trySomethingNew;
+        await StudyHard;
+        await PlayHard;
+        return true;
+      }catch(e) {
+        e === 'critical' ? console.warn('Think about it for next challenge')
+          : console.log('No problems');
+        return false;
+      }
+    }
+  };
+  const others: object = {
+    hobby: [
+      travel, soccer, surfing, camping, programing, leatherCraft, readingBook
+    ],
+    eductation: {
+      University: 'Nagoya University Education dept',
+      ExchangeStudent: 'Uppsala University  in Sweden'
+    },
+    experience: {
+      Worksapplications: 'Quality Engineer',
+      Okan: [
+        'Product Manager', 'TechLead', 'ServerSide Enginer', 'Mobile Engineer', 'Infra Engineer'
+      ],
+      FreeLance: [
+        'Carstay', 'Rails Teacher', 'Created Booking System for Futsal'
+      ]
+    }
+  };
+  return (
+    &lt;Human sex={Sex.male} birthday='1993-01-06' others={others} >
+      &lt;Do keep={_onLive()}/>
+    &lt;/Human>
+  );
+};
+
+export default YuukiKanasugi;
+                </code>
+              </pre>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
-    <p id="load">Firebase SDK Loading&hellip;</p>
+<!--    <div id="mission">-->
+<!--      <div class="bg-rgba">-->
+<!--        <h1 id="mission-text">ソフトウェアの力で<br/>社会の問題解決</h1>-->
+<!--      </div>-->
+<!--    </div>-->
+    <div class="profile">
+      <div class="container">
+        <div class="category">
+          About
+        </div>
+        <div class="work-container row">
+          <div class="profile-img-container col-lg-5">
+            <img src="https://firebasestorage.googleapis.com/v0/b/dev-subro.appspot.com/o/portfolio%2Fprofile-pic.jpg?alt=media&token=071fa7c6-213b-4f28-900e-9b7a9ede3eed"
+                 class="profile-img"
+                 height="420"
+                 width="420"
+            >
+          </div>
+          <div class="profile-desc col-lg-7">
+            <div class="profile-title-container">
+              <div class="work-title-desc pl-3">
+                <div class="profile-title-main">かなすぎ ゆうき</div>
+                <div class="profile-title-sub">Yuuki Kanasugi</div>
+              </div>
+            </div>
+            <div class="profile-detail-container">
+              <div class="profile-detail">
 
-    <script>
-      document.addEventListener('DOMContentLoaded', function() {
-        // // 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
-        // // The Firebase SDK is initialized and available here!
-        //
-        // firebase.auth().onAuthStateChanged(user => { });
-        // firebase.database().ref('/path/to/ref').on('value', snapshot => { });
-        // firebase.messaging().requestPermission().then(() => { });
-        // firebase.storage().ref('/path/to/ref').getDownloadURL().then(() => { });
-        //
-        // // 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
+                週休3日のフリーランスエンジニア<br/>
+                ←株式会社OKAN(PdM, TechLead)<br/>
+                ←株式会社ワークスアプリケーションズ。<br/><br/>
 
-        try {
-          let app = firebase.app();
-          let features = ['auth', 'database', 'messaging', 'storage'].filter(feature => typeof app[feature] === 'function');
-          document.getElementById('load').innerHTML = `Firebase SDK loaded with ${features.join(', ')}`;
-        } catch (e) {
-          console.error(e);
-          document.getElementById('load').innerHTML = 'Error loading the Firebase SDK, check the console.';
-        }
-      });
-    </script>
+                名古屋大学教育学部卒。<br/>
+                ウプサラ大学(スウェーデン)でリカレント教育の研究。<br/><br/>
+
+                独学で、英語とプログラミングを取得。<br/>
+                フリーランスエンジニアとして活動しながら、DOKUGAKUの運営<br/>
+                TOEIC 900<br/>
+                Ruby on Rails, ReactNative, React.js, Nose.js<br/><br/>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="work">
+      <div class="container-lg">
+        <div class="category">
+          WORK1
+        </div>
+        <div class="row">
+          <div class="col-lg-5 work-img-wrap">
+            <img src="https://firebasestorage.googleapis.com/v0/b/dev-subro.appspot.com/o/portfolio%2Fwork-img-subro.png?alt=media&token=57a58704-b6fd-4c7c-b7f3-f52435108814"
+                 class="work-img"
+                 height="600"
+            >
+            <img src="https://firebasestorage.googleapis.com/v0/b/dev-subro.appspot.com/o/portfolio%2Fiphonexw.png?alt=media&token=80fb5a5d-2195-47f0-995b-953c0c40ba96"
+                 class="work-img2"
+            >
+          </div>
+          <div class="work-desc col-lg-7">
+            <div class="work-title-container">
+              <img src="asset/logo-subro.png" class="work-title-img">
+              <div class="work-title-desc pl-3">
+                <div class="work-title-main">Subro</div>
+                <div class="work-title-sub">サブスクリプション管理アプリ</div>
+              </div>
+            </div>
+            <div class="work-detail-container border">
+              <div class="work-detail">
+                ■問題意識<br/>
+                サブスクリプションモデルは、ビジネスモデルを考える時には<br/>
+                最適だが、本当にユーザーにとって望ましいものなのか？<br/><br/>
+
+                ■アプリの説明<br/>
+                使ってないサブスクをすぐ解約できるようにして、ユーザーに適切<br/>
+                な期間適切なサービスを利用させるためのアプリ<br/><br/>
+
+                ■使ってる技術<br/>
+                React Native, TypeScript, Expo, Firebase
+              </div>
+            </div>
+            <div class="work-links">
+              <a href="https://apps.apple.com/jp/app/subro/id1507953087" target="_blank" class="link-wrap">
+                <img src="asset/app-store-badge.png" class="store-img-apple">
+              </a>
+              <a href="https://play.google.com/store/apps/details?id=jp.subro" target="_blank" class="link-wrap">
+                <img src="asset/google-play-badge.png" class="store-img-google">
+              </a>
+            </div>
+            <div class="text-right">© Subro All Rights Reserved</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="work">
+      <div class="container-lg">
+        <div class="category">
+          WORK2
+        </div>
+        <div class="row">
+          <div class="col-lg-5 work-img-wrap">
+            <img src="https://firebasestorage.googleapis.com/v0/b/dev-subro.appspot.com/o/portfolio%2Fwork-img-okanpay.png?alt=media&token=f4638e0c-376f-4e85-bbbc-92f2fbe8fdd5"
+                 class="work-img"
+                 height="600"
+            >
+            <img src="https://firebasestorage.googleapis.com/v0/b/dev-subro.appspot.com/o/portfolio%2Fiphonexw.png?alt=media&token=80fb5a5d-2195-47f0-995b-953c0c40ba96"
+                 class="work-img2"
+            >
+          </div>
+          <div class="work-desc col-lg-7">
+            <div class="work-title-container">
+              <img src="asset/logo-okanpay.png" class="work-title-img">
+              <div class="work-title-desc pl-3">
+                <div class="work-title-main">おかんPay</div>
+                <div class="work-title-sub">オフィスおかん用支払いアプリ</div>
+              </div>
+            </div>
+            <div class="work-detail-container border">
+              <div class="work-detail">
+                ■アプリの説明<br/>
+                オフィスおかんというプチ社食サービスの支払いをすることができる<br/>
+                オンライン決済アプリ<br/><br/>
+
+                ■役割<br/>
+                Product Manger兼Engineerとして、採用、法務、企画、設計、実装<br/>
+                を担当。ネイティブ実装から、React Naitveへ置き換え、LinePay,<br/>
+                PayPay, メルペイなどの組み込みも行う<br/><br/>
+
+                ■使ってる技術<br/>
+                React Native, Ruby on Rails, AWS
+              </div>
+            </div>
+            <div class="work-links">
+              <a href="https://apps.apple.com/jp/app/%E3%81%8A%E3%81%8B%E3%82%93pay/id930164902" target="_blank" class="link-wrap">
+                <img src="asset/app-store-badge.png" class="store-img-apple">
+              </a>
+              <a href="https://play.google.com/store/apps/details?id=jp.okan.account&hl=en_US" target="_blank" class="link-wrap">
+                <img src="asset/google-play-badge.png" class="store-img-google">
+              </a>
+            </div>
+            <div class="text-right">© Okan, Inc. All Rights Reserved</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="work">
+      <div class="container-lg">
+        <div class="category">
+          WORK3
+        </div>
+        <div class="row">
+          <div class="col-lg-5 work-img-wrap">
+            <img src="https://firebasestorage.googleapis.com/v0/b/dev-subro.appspot.com/o/portfolio%2Fwork-img-carstay.png?alt=media&token=02ed9588-1a54-4442-bf7b-432e2f593876"
+                 class="work-img"
+                 height="600"
+            >
+            <img src="https://firebasestorage.googleapis.com/v0/b/dev-subro.appspot.com/o/portfolio%2Fiphonexw.png?alt=media&token=80fb5a5d-2195-47f0-995b-953c0c40ba96"
+                 class="work-img2"
+            >
+          </div>
+          <div class="work-desc col-lg-7">
+            <div class="work-title-container">
+              <img src="asset/logo-carstay.png" class="work-title-img">
+              <div class="work-title-desc pl-3">
+                <div class="work-title-main">Carstay</div>
+                <div class="work-title-sub">車中泊、バンシェアサービス</div>
+              </div>
+            </div>
+            <div class="work-detail-container border">
+              <div class="work-detail">
+                ■サービスの説明<br/>
+                駐車場やキャンピングカーのシェアリングサービス。<br/>
+                「誰もが好きな時に、好きな場所で、好きな人と過ごせる世界をつくる」<br/>
+                の実現に向けて活動。<br/><br/>
+
+                ■役割<br/>
+                業務委託として参画。Vanshareサービスの立ち上げを中心に<br/>
+                FrontEndを中心にBackEndの開発に携わる。<br/><br/>
+
+                ■使ってる技術<br/>
+                React.js, Typescript, React SSR,  Node.js, mongoDB,  AWS
+              </div>
+            </div>
+            <div class="work-links-empty"></div>
+            <div class="text-right">© Carstay, Inc. All Rights Reserved</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="work">
+      <div class="container-lg">
+        <div class="category">
+          WORK4
+        </div>
+        <div class="row">
+          <div class="col-lg-5 work-img-wrap">
+            <img src="https://firebasestorage.googleapis.com/v0/b/dev-subro.appspot.com/o/portfolio%2Fwork-img-covid19.png?alt=media&token=48c1f67d-bb45-45ee-9ac7-b97c83e2a70d"
+                 class="work-img"
+                 height="600"
+            >
+            <img src="https://firebasestorage.googleapis.com/v0/b/dev-subro.appspot.com/o/portfolio%2Fiphonexw.png?alt=media&token=80fb5a5d-2195-47f0-995b-953c0c40ba96"
+                 class="work-img2"
+            >
+          </div>
+          <div class="work-desc col-lg-7">
+            <div class="work-title-container">
+              <img src="asset/logo-covid19.png" class="work-title-img">
+              <div class="work-title-desc pl-3">
+                <div class="work-title-main-double">東京都 新型コロナウイルス感染症対策サイト</div>
+              </div>
+            </div>
+            <div class="work-detail-container border">
+              <div class="work-detail">
+                ■サイトの説明<br/>
+                東京都による公式情報と客観的な数値をわかりやすく伝えることで、<br/>
+                東京都にお住まいの方や、東京都内に拠点を持つ企業の方、<br/>
+                東京都を訪れる方が、現状を把握して適切な対策を取れるようにすること<br/>
+                を目的としています。<br/><br/>
+
+                ■役割<br/>
+                OSSのコミッターとして参画。自分のMissionである「ソフトウェアの<br/>
+                力で社会問題解決」がこんなにもできるチャンスはないと思い参画を決意。<br/><br/>
+                FrontEndを担当。<br/><br/>
+
+                ■使ってる技術<br/>
+                Nuxt.js
+              </div>
+            </div>
+            <div class="work-links-empty"></div>
+            <div class="text-right">© 2020 Tokyo Metropolitan Government</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="contact">
+      <div class="container">
+        <div class="category">
+          CONTACT
+        </div>
+        <div class="contact-container">
+          <a href="https://twitter.com/OKanasugi" target="_blank">
+            <img src="asset/logo-twitter.png" class="contact-link">
+          </a>
+          <a href="https://www.facebook.com/yuuki.kanasugi" target="_blank">
+            <img src="asset/logo-facebook.png" class="contact-link">
+          </a>
+          <a href="https://note.com/knsg16" target="_blank">
+            <img src="asset/logo-note.png" class="contact-link">
+          </a>
+          <a href="https://github.com/knsg16" target="_blank">
+            <img src="asset/logo-github.png" class="contact-link">
+          </a>
+          <a href="https://www.linkedin.com/in/yuuki-kanasugi-777542116/" target="_blank">
+            <img src="asset/logo-linkedin.png" class="contact-link">
+          </a>
+          <a href="https://bookmeter.com/users/728954" target="_blank">
+            <img src="asset/logo-bookmater.png" class="contact-link">
+          </a>
+        </div>
+      </div>
+    </div>
   </body>
 </html>
