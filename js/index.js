@@ -70,4 +70,8 @@ $(function(){
     $('#introductionTsTab').css('border-bottom','solid 3px #282A36');
 
   });
+
+  $('.close').on('click', function(e) {
+    alert('消さないで〜〜');
+  });
 });

@@ -289,3 +289,7 @@ pre {
 #introductionTsTab {
   border-bottom: solid 3px #8BE9FD;
 }
+
+#introductionTs {
+  border-left: solid 3px #8BE9FD;
+}
