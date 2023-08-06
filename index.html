@@ -113,32 +113,26 @@
             <div id="text">
               <pre id="introductionTsCode">
                 <code class="typescript" id="js-target" style="display: none">import Human, { IHuman } from 'human'
-import { travel, soccer, surfing, camping } from 'outdoor-hobbies'
-import { programing, leatherCraft, readingBook } from 'indoor-hobbies'
 
-const others: object = {
+const others: Object = {
   hobby: [
-    travel, soccer, surfing, camping, programing, leatherCraft, readingBook
+    '旅行', 'サッカー', 'サーフィン', 'キャンプ', 'プログラミング', '革細工', '読書', '釣り'
   ],
-  eductation: {
-    University: 'Nagoya University Education dept',
-    ExchangeStudent: 'Uppsala University  in Sweden'
-  },
-  experience: {
-    Worksapplications: 'Quality Engineer',
-    Okan: [
-      'Product Manager', 'TechLead', 'ServerSide Enginer', 'Mobile Engineer', 'Infra Engineer'
-    ],
-    FreeLance: [
-      'Carstay', 'Rails Teacher', 'Created Booking System for Futsal'
-    ]
-  }
+  eductation: [
+    '名古屋大学', 'ウプサラ大学'
+  ]
+  experience: [
+    'ワークスアプリケーションズ',
+    'OKAN',
+    'Carstay',
+    'EventHub',
+    'ミチビク'
+  ],
 };
 
-export const KanasugiYuuki: IHuman = () => {
-  let me: IHuman = new Human(Sex.male, '1993-01-06', others);
-  me.personality = 'Optimistic';
-  await live(me.age);
+export const 金杉優樹: IHuman = () => {
+  let me: IHuman = new Human('男性', '1993-01-06', others);
+  me.personality = ['楽観的', '挑戦心'];
   return me;
 };
 
@@ -150,20 +144,21 @@ const live = async (age: number) => {
       await PlayHard;
       return true;
     }catch(e) {
-      e === 'critical' ? console.warn('Think about it for next challenge')
+      e === 'critical' ? console.warn('次の挑戦')
         : console.log('No problems');
       return false;
     }
   }
 };
+
+await 金杉優樹.live();
+
                 </code>
               </pre>
               <pre id="introductionTsxCode" style="display: none;">
                 <code class="typescript" >import React from "react";
-import { travel, soccer, surfing, camping } from 'outdoor-hobbies'
-import { programing, leatherCraft, readingBook } from 'indoor-hobbies'
 
-const YuukiKanasugi = ({props: IProps}) => {
+const 金杉優樹 = ({props: IProps}) => {
   const {age} = props;
   const _onLive = async () => {
     while(age <= 100){
@@ -173,32 +168,29 @@ const YuukiKanasugi = ({props: IProps}) => {
         await PlayHard;
         return true;
       }catch(e) {
-        e === 'critical' ? console.warn('Think about it for next challenge')
+        e === 'critical' ? console.warn('次の挑戦')
           : console.log('No problems');
         return false;
       }
     }
   };
-  const others: object = {
+  const others: Object = {
     hobby: [
-      travel, soccer, surfing, camping, programing, leatherCraft, readingBook
+      '旅行', 'サッカー', 'サーフィン', 'キャンプ', 'プログラミング', '革細工', '読書', '釣り'
     ],
-    eductation: {
-      University: 'Nagoya University Education dept',
-      ExchangeStudent: 'Uppsala University  in Sweden'
-    },
-    experience: {
-      Worksapplications: 'Quality Engineer',
-      Okan: [
-        'Product Manager', 'TechLead', 'ServerSide Enginer', 'Mobile Engineer', 'Infra Engineer'
-      ],
-      FreeLance: [
-        'Carstay', 'Rails Teacher', 'Created Booking System for Futsal'
-      ]
-    }
+    eductation: [
+      '名古屋大学', 'ウプサラ大学'
+    ]
+    experience: [
+      'ワークスアプリケーションズ',
+      'OKAN',
+      'Carstay',
+      'EventHub',
+      'ミチビク'
+    ],
   };
   return (
-    &lt;Human sex={Sex.male} birthday='1993-01-06' others={others} >
+    &lt;Human sex={'男性'} birthday='1993-01-06' others={others} >
       &lt;Do keep={_onLive()}/>
     &lt;/Human>
   );
