@@ -22,15 +22,23 @@
   height: 1200px;
 }
 
+.editor {
+  display: flex;
+  flex-direction: row;
+}
+
 #right {
   background-color: #282A36;
   height: 1200px;
   flex-direction: column;
+  width: 100%;
 }
+
 #left {
   background-color: #313437;
   height: 1200px;
   flex-direction: column;
+  min-width: 240px;
 }
 
 .folder {
@@ -148,12 +156,6 @@ pre {
   background-color: blue;
 }
 
-
-
-.works {
-  /* display: flex;
-  flex-direction: row; */
-}
 
 .container {
   height: 800px;

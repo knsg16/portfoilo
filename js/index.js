@@ -5,14 +5,7 @@ $(function(){
     if(isDisplay){
       $('#js-target').t({
         speed: 1,
-        init:function(elm){
-          console.log('init');
-        },
-        typing:function(elm,left,total){
-          console.log('typing');
-        },
-        fin:function(elm){
-          console.log('fin');
+        fin:function(_elm){
           isDisplay = false;
         }
       });
@@ -64,7 +57,6 @@ $(function(){
   });
 
   $('#introductionTsxTab').on('click', function(e) {
-    // $('p').css('color','blue');
     $('#introductionTsCode').hide();
     $('#introductionTsxCode').show();
 
